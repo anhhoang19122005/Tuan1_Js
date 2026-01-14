@@ -7,7 +7,35 @@
 </head>
 <body>
     <script>
-        
+            var Dolphins = [97,112,101];
+            var Koalas = [109,95,123];
+            var tongDiemDolphins = 0;
+            for (var i = 0; i < Dolphins.length; i++) {
+                tongDiemDolphins += Dolphins[i];
+            }
+            var tongDiemKoalas = 0;
+            for (var i = 0; i < Koalas.length; i++) {
+                tongDiemKoalas += Koalas[i];
+            }
+            console.log(tongDiemDolphins);
+            console.log(tongDiemKoalas);
+            var tongDiemDolphinsTB = tongDiemDolphins / 3;
+            var tongDiemKoalasTB = tongDiemKoalas / 3;
+            if (tongDiemDolphinsTB >= 100 && tongDiemKoalasTB >= 100) {
+                if (tongDiemDolphins > tongDiemKoalas) {
+                    console.log("Dolphins win!");
+                } else if (tongDiemDolphins < tongDiemKoalas) {
+                    console.log("Koalas win!");
+                } else {
+                    console.log("Equal!");
+                }
+            } else if (tongDiemDolphinsTB >= 100 && tongDiemKoalasTB <= 100) {
+                console.log("Dolphins win!");
+            } else if (tongDiemDolphinsTB <= 100 && tongDiemKoalasTB >= 100) {
+                console.log("Koalas win!");
+            } else {
+                console.log("Khong doi nao gianh duoc cup do < 100 diem");
+            }
     </script>
 </body>
 </html>
