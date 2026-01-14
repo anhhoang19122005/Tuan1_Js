@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id ="John">
+        <label for="">Mass John: </label>
+        <input type="text" name="" id="JohnMass">
+        <label for="">Height John: </label>
+        <input type="text" name="" id="JohnHeight">
+    </div>
+    <div id="Mark">
+        <label for="">Mass Mark: </label>
+        <input type="text" name="" id="MarkMass">
+        <label for="">Height Mark: </label>
+        <input type="text" name="" id="HeightMark">
+    </div>
+    <div id="buttonCalcBMI">
+        <button id="calcBMI">Calc BMI</button>
+        John<input type="text" name="" id="JohnBMI">
+        Mark<input type="text" name="" id="MarkBMI">
+    </div> -->
+    <script>
+        // var MarkMass = document.getElementById("MarkMass");
+        // var JohnMass = document.getElementById("JohnMass");
+        // var MarkHeight = document.getElementById("HeightMark");
+        // var JohnHeight = document.getElementById("JohnHeight");
+        var MarkMass = 78;
+        var JohnMass = 92;
+        var MarkHeight = 1.69;
+        var JohnHeight = 1.95;
+        var MarkBMI = MarkMass / Math.pow(MarkHeight, 2);
+        var JohnBMI = JohnMass / Math.pow(JohnHeight, 2)
+        console.log(MarkBMI)
+        console.log(JohnBMI);
+        var markHigherBMI = false
+        if (MarkBMI > JohnBMI) {
+            markHigherBMI = true
+        }
+        console.log(markHigherBMI);
+    </script>
+</body>
+</html>
