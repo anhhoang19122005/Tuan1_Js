@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const printForecast = (arr) => {
+        arr.forEach((temp, index) => {
+          console.log(`... ${temp}°C in ${index + 1} days`);
+        });
+      };
+
+      // § Data 1: [17, 21, 23]
+      // § Data 2: [12, 5, -5, 0, 4]
+        printForecast([17, 21, 23]);
+        printForecast([12, 5, -5, 0, 4]);
+    </script>
+  </body>
+</html>

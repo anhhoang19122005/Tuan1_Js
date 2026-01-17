@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const MakrObj = {
+        full_name: "Mark",
+        mass: 78,
+        height: 1.69,
+      };
+      const JohnObj = {
+        full_name: "John",
+        mass: 92,
+        height: 1.95,
+      };
+
+      const calcBMI = (person) => {
+        return person.mass / person.height ** 2;
+      };
+
+      MakrObj.bmi = calcBMI(MakrObj);
+      JohnObj.bmi = calcBMI(JohnObj);
+
+      if (MakrObj.bmi > JohnObj.bmi) {
+        console.log(
+          `${MakrObj.full_name}'s BMI (${MakrObj.bmi.toFixed(
+            1,
+          )}) is higher than ${JohnObj.full_name}'s (${JohnObj.bmi.toFixed(1)})!`,
+        );
+      } else if (JohnObj.bmi > MakrObj.bmi) {
+        console.log(
+          `${JohnObj.full_name}'s BMI (${JohnObj.bmi.toFixed(
+            1,
+          )}) is higher than ${MakrObj.full_name}'s (${MakrObj.bmi.toFixed(1)})!`,
+        );
+      } else {
+        console.log("Both have the same BMI.");
+      }
+    </script>
+  </body>
+</html>
