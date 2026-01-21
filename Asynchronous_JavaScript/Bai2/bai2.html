@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var createImage = function(imgPath) {
+            return new Promise(function(resolve, reject) {
+                var img = document.createElement('img');
+                img.src = imgPath;
+
+                img.onload = function() {
+                    document.body.appendChild(img);
+                    resolve(img);
+                };
+                img.onerror = function() {
+                    reject(() => {
+                        console.error('Image not found');
+                    });
+                };
+
+            });
+        };
+
+        createImage('img-1.jpg')
+            .then(function(img) {
+                console.log('Image loaded successfully ' + img.src);
+                return img;
+            }).then((img) => {
+                console.log(img.src);
+                setTimeout(() => {
+                    img.style.display = 'none';
+                }, 2000);
+                return img;
+            }).catch(function(err) {
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
